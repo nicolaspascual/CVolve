@@ -1,0 +1,13 @@
+{%extends "base.html"%}
+
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+
+    <input id="id_username" type="text" name="username">
+    <input id="id_password" type="password" name="password">
+    <input id="id_repeat_password" type="password" name="repeat_password">
+
+    <button class="btn btn-primary" type="submit">Register</button>
+</form>
+{% endblock %}

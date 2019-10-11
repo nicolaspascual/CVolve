@@ -5,6 +5,14 @@
         {% endblock %}
     </head>
     <body>
+        {% if errors %}
+            {% for error in errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        {% endif %}
+
         {% block content %}
         {% endblock %}
     </body>
