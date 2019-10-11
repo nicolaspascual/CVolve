@@ -1,0 +1,36 @@
+{
+    "title": "Machine Learning Expert",
+    "company": "Typeform",
+    "department": "Engineering",
+    "location": {
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "country": "Spain"
+    },
+    "description": "Data and Machine Learning organization is a cross-functional team of Data and Machine Learning Engineers, Data Analysts, and Scientists and Market Researchers that provides critical insights to decision-makers in Marketing, Product, Customer Success, and other business functions. In partnership with Product, we are developing machine learning models that turn static web forms into dynamic conversational interfaces to elevate the experience of information exchange between businesses and their customers. Every month, tens of millions of people respond to surveys, fill check-out forms, inquire about products and plan work with Typeform. We want to make this experience seamless, effortless, intuitive and adaptive to each respondent. Machine learning is how we will achieve that.\nWe are looking for a Senior/Staff Machine Learning engineers, who will work with our Data Scientists and Data Engineers to productionize and scale models behind some of the key product features as well as models that power our marketing and customer success campaigns. You will be involved in all steps of model development and maintenance and ensure that we balance end-to-end product delivery and maintenance, invest in infrastructure and resolve technical debt, and perform exploratory investigations for existing model improvements and new model development.",
+    "type": "full",
+    "responsibilities": [
+        "Work with Product Managers, Data Scientists, and other ML Engineers to define Machine Learning problems within the business context.",
+        "Own or partner with data scientists across the full development cycle: design, development, QA, experimentation, analysis, and deployment.",
+        "Develop, productionize and maintain models for customer segmentation, LTV and churn prediction, marketing spend optimization, and creative optimization.",
+        "Develop, productionize and maintain models for product recommendations, sentiment analysis, discourse analysis, etc.",
+        "Drive further improvement to our workflow for experimenting, developing, and testing new machine learning algorithms."
+    ],
+    "minimum_requirements": [
+        "You have experience with sci-kit-learn or other ML libraries and with some DL libraries such as Tensorflow, PyTorch, Keras, MXNet, etc.",
+        "You have experience in the areas of streaming ML, recommenders, NLP, AI Agents, and knowledge graphs is a plus.",
+        "You have experience with caching solutions (Memcache, Redis, etc.), NoSQL databases (e.g. Cassandra, MongoDB, etc.) and queuing technologies (Kafka, SQS, etc.)",
+        "You have experience designing and productionizing large-scale distributed systems built around Machine Learning models and big data. Experience with Spark and AWS is highly desired.",
+        "You have built ML services in SOA or microservices architecture. Experience with Scala/Java frameworks such as Play, HTTP, Akka is a plus.",
+        "You are an “engineer at heart”. You take pride in designing software systems and producing clean, modular, high-quality code. You have experience working with version control and continuous integration tools.",
+        "You have 6+ years of experience as a Software Engineer and track-record of building applications using Scala/Java and Python.",
+        "You have 4+ years of experience building large-scale Machine Learning pipelines and data-driven products.",
+        "You have a B.S., M.S. or Ph.D. in Computer Science or related technical field.",
+        "You are entrepreneurial, self-directed and strongly biased towards action. You thrive in a fast-paced environment.",
+        "You love to learn and continuously invest time to improve your skills.",
+        "You are fluent in English and enjoy working in a multicultural environment."
+    ],
+    "preferred_requirements": [],
+    "compensation": "",
+    "duration": ""
+}

@@ -1,0 +1,34 @@
+{
+    "title": "Data Engineer, Analytics, Intern",
+    "company": "Facebook",
+    "department": "Data and Analytics",
+    "location": {
+        "city": "Menlo Park",
+        "state": "California",
+        "country": "USA"
+    },
+    "description": "Facebook's mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we're building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together. Whether we're creating new products or helping a small business expand its reach, people at Facebook are builders at heart. Our global teams are constantly iterating, solving problems, and working together to empower people around the world to build community and connect in meaningful ways. Together, we can help people build stronger communities — we're just getting started. Would you like to work with big data? Do you want to use data to influence product decisions for products being used by over half a billion people every day? If yes, we want to talk to you. Our data warehouse team works very closely with Product Managers, Product Analysts and Internet Marketers to figure out ways to acquire new users, retain existing users and optimize user experience - all of this using massive amounts of data. In this role, you will see a direct link between your work, company growth, and user satisfaction. You will work with some of the brightest minds in the industry, and you'll have the opportunity to solve some of the most challenging business problems on the web and mobile Internet, at a scale that few companies can match.",
+    "type": "internship",
+    "responsibilities": [
+        "Architect, implement and deploy new data models and data processes in production.",
+        "Perform data analysis to generate business insights.",
+        "Interface with Engineers, Product Managers and Product Analysts to understand product goals and data needs.",
+        "Build data expertise and own data quality for allocated areas of ownership.",
+        "Manage data warehouse plans for a product or a group of products.",
+        "Support critical data processes running in production."
+    ],
+    "minimum_requirements": [
+        "Currently has, or is in the process of obtaining, a Bachelors, Masters or PhD degree in Computer Science, Mathematics, or related technical field",
+        "Programming expertise in a language of your choice",
+        "Knowledge of SQL",
+        "Knowledge of database systems",
+        "Must obtain work authorization in country of employment at the time of hire, and maintain ongoing work authorization during employment"
+    ],
+    "preferred_requirements": [
+        "Intent to return to degree-program after the completion of the internship",
+        "Curious, self-driven, analytical and excited to play with data",
+        "Ability to thrive in a fast paced work environment"
+    ],
+    "compensation": "",
+    "duration": ""
+}

@@ -1,0 +1,29 @@
+{
+    "title": "Software Engineer, Intern/Co-op",
+    "company": "Facebook",
+    "department": "Internship - Engineering, Tech & Design",
+    "location": {
+        "city": "London",
+        "state": "England",
+        "country": "United Kingdom"
+    },
+    "description": "Facebook's mission is to give people the power to build community and bring the world closer together. Through our family of apps and services, we're building a different kind of company that connects billions of people around the world, gives them ways to share what matters most to them, and helps bring people closer together. Whether we're creating new products or helping a small business expand its reach, people at Facebook are builders at heart. Our global teams are constantly iterating, solving problems, and working together to empower people around the world to build community and connect in meaningful ways. Together, we can help people build stronger communities — we're just getting started. Want to build new features and products that touch more than a billion people around the world? Want to build new features that improve existing products like Photos, Groups, NewsFeed, Search, and Messaging? Want to solve unique, large-scale, highly complex technical problems? Our development cycle is extremely fast, and we've built tools to keep it that way. It's common to write code and have it running live on the site hours later. If you work for us you will make an impact, immediately. Facebook is seeking interns/co-ops to join our engineering team. You can help build the next generation of systems behind Facebook's products, create web applications that reach millions of people, build high volume servers and be a part of a team that’s working to help connect people around the globe.",
+    "type": "internship",
+    "responsibilities": [
+        "Code high-volume software using primarily C++ and Java",
+        "Create web applications using primarily PHP",
+        "Implement web interfaces using XHTML, CSS, and JavaScript",
+        "Build report interfaces and data feeds"
+    ],
+    "minimum_requirements": [
+        "1 or more years of experience with perl, java, php, python, or c++",
+        "Must be currently enrolled in a full-time, degree-seeking program and in the process of obtaining a Bachelors or Masters degree in Computer Science or a related field"
+    ],
+    "preferred_requirements": [
+        "Demonstrated software engineering experience from previous internship, work experience, coding competitions, or publications",
+        "Intent to return to degree-program after the completion of the internship/co-op",
+        "High levels of creativity and quick problem-solving capabilities"
+    ],
+    "compensation": "",
+    "duration": "12 weeks"
+}

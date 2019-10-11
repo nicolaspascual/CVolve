@@ -1,0 +1,33 @@
+{
+    "name": "",
+    "surnames": "",
+    "mail": "",
+    "phone": "",
+    "summary": "",
+    "experience": [
+        {
+            "role": "",
+            "company": "",
+            "start_date": "",
+            "end_date": "",
+            "summary": ""
+        }
+    ],
+    "education": [
+        {
+            "title": "",
+            "institution": "",
+            "start_date": "",
+            "end_date": "",
+            "summary": ""
+        }
+    ],
+    "skills": [],
+    "languages": [],
+    "projects":[
+        {
+            "name": "",
+            "summary": ""
+        }
+    ]
+}

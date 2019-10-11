@@ -1,0 +1,37 @@
+{
+    "title": "Full-stack Engineer",
+    "company": "Typeform",
+    "department": "Engineering",
+    "location": {
+        "city": "Barcelona",
+        "state": "Catalonia",
+        "country": "Spain"
+    },
+    "description": "Typeform is helping companies get closer to their customers and employees by ridding the world of boring, unengaging online forms. \nAre you a passionate, results-driven developer with an entrepreneurial spirit? Are you excited by user-behavior data, and never make a decision without it? Do you believe pragmatism and creativity go hand in hand? Do you like to make a difference and enjoy being on the front line of company growth? \nWe’re looking for a talented, passionate, and pragmatic Full-stack Engineer to join our team of 44 different nationalities in Barcelona.",
+    "type": "full",
+    "responsibilities": [
+        "You’ll collaborate with Engineers, Product, Design, and Data to propose the best solution for a business challenge.",
+        "You’ll learn many aspects of the Typeform platform and work in many different codebases such as Core functionalities, Onboarding flows, Public properties and APIs.",
+        "You’ll experiment and fail fast, but you’ll build high-quality and sustainable code that renders great user experience.",
+        "You’ll be working on a dynamic product that is changing and evolving rapidly.",
+        "Grow—use your annual learning budget to take a course or go to conferences. There’ll be plenty of opportunities for advancement as well.",
+        "Eat tasty lunches on our sunny roof terrace."
+    ],
+    "minimum_requirements": [
+        "You’re comfortable picking up new stacks and choosing the right tool to get the job done.",
+        "You’re comfortable with not just one but several technologies from our stack: Javascript (ReactJS), Php, Go, Node, and Ruby.",
+        "Writing unit and integration tests is a given for you. You understand that quality is down to everybody.",
+        "Be heavily involved in the end-to-end lifecycle of features, from concept to deployment.",
+        "You show maturity in tradeoffs, make sound decisions, and plan well.",
+        "You prefer impact over speed.",
+        "You’re business outcome-driven.",
+        "You like to innovate, experiment, and run with ideas.",
+        "You obsess over metrics and targets.",
+        "You’re fluent in English and eager to work in a multicultural, international environment.",
+        "You’re an empathetic person with a big appetite for success.",
+        "It’s a plus if you’ve done, contributed to, or participated in a growth environment."
+    ],
+    "preferred_requirements": [],
+    "compensation": "",
+    "duration": ""
+}

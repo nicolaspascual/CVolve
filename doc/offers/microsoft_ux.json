@@ -1,0 +1,39 @@
+{
+    "title": "UI/UX Lead",
+    "company": "Microsoft",
+    "department": "Engineering",
+    "location": {
+        "city": "Santa Monica",
+        "state": "California",
+        "country": "USA"
+    },
+    "description": "The Initiative is a new first-party game studio located in Santa Monica backed by Microsoft. Our studio is about craft, creating story, innovating, and looking ahead to the next big thing.\nAt the Initiative, we are looking for collaborative problem solvers who want to dive into something new and create groundbreaking experiences for our players. Join us for this once in a career opportunity to help build the studio, define our culture, and create an environment to attract world-class talent. \nThe Initiative has an immediate opening for an experienced UI/UX Lead to concept, innovate and drive highly polished, intuitive user interface and experience. Partnering with a team of Designers, Engineers, and visual Artists, you will research and iterate on interface experiences, both aesthetically and functionally, to create an intuitive, refined experiences that minimizes friction between play and the player. You will have knowledge and expertise in cutting-edge UI techniques and will be fluent in the interaction between aesthetics and functionality to create a seamless experience. \nYou have a proven track record of delivering high quality player experiences through healthy collaboration with your team. You are versatile, have strong development and production-sense, and the expertise to inspire and mentor others to do their best work.",
+    "type": "full",
+    "responsibilities": [
+        "Partner closely with Design, Engineering, Production and Art team to build internal art processes, guide content creation workflows, and define and execute implement best practices",
+        "Drive the concept and development of innovative functional and/or aesthetic UI/UX experience, including designing compelling, intuitive player experiences",
+        "Create wireframes, prototypes and UI/UX designs",
+        "Support pipeline development, UI screen implementation and iteration of UI toolset within game engine",
+        "Research and design using state-of-the-art design principles, examples, and tools, as needed",
+        "Assist as needed with the creation of internal presentations and other rhythm-of-the-business materials",
+        "Actively contribute to growth of new start up studio: be an active contributor to studio culture and lead by example, including demonstrating a willingness to give and receive feedback, collaborate with others to share techniques, ideas, and contribute to a positive working environment"
+    ],
+    "minimum_requirements": [
+        "8+ years of UI and UX game design experience, including working in game art creation pipelines, workflows, and tools",
+        "Expertise creating design documents including user stories, conceptual models, annotated wireframes, storyboards, creative briefs",
+        "Expertise in Adobe Suite, including Photoshop and Illustrator",
+        "Demonstrated understanding of fundamentals in visual and graphic disciplines: typography, iconography, composition, color, composition, layout, etc.",
+        "Experience in a commercial game engine such as Unity or Unreal",
+        "Demonstrated experience partnering with multi-disciplinary game development teams"
+    ],
+    "preferred_requirements": [
+        "Experience scripting in 2D or 3D",
+        "Experience in 3D Software, for example Maya or Max",
+        "Familiarity understanding and/or executing against qualitative and quantitative User Research",
+        "Ability to problem solve and think creatively and critically to support content creators",
+        "Research experience and deep understanding of latest techniques in UI and UX, with demonstrated passion for keeping skillset cutting-edge sharp",
+        "Excellent written and verbal communications skills as well as strong presentation and organizational skills"
+    ],
+    "compensation": "",
+    "duration": ""
+}

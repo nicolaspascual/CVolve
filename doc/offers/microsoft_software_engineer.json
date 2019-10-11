@@ -1,0 +1,35 @@
+{
+    "title": "Senior Software Engineer",
+    "company": "Microsoft",
+    "department": "Engineering",
+    "location": {
+        "city": "Redmond",
+        "state": "Washington",
+        "country": "USA"
+    },
+    "description": "Cloud computing is the next big thing, it is the wave of the future. Most new software being built today is for the cloud. Today, there is a limited pool of people who know how to build and operate cloud-native applications. Microsoft’s Identity division is at the center of Microsoft’s cloud strategy, we build and operate authentication and authorization services that are used by the millions of Windows, Office, XBOX and Azure users worldwide. In the mobile-first cloud-first world the sign in experience is the front door for building closer customer relationships, supporting smoother commerce transactions and keeping people safe. Our services handle over 4 million requests per minute from our data centers worldwide, we know how to engineer for the cloud. \nThe identity division is a customer focused organization with an emphasis on security, a great user experience and high reliability. If that sounds like the right environment for you, please join us! If you have experience working with high scale production services come and share your learnings; otherwise bring your passion and willingness to learn.",
+    "type": "full",
+    "responsibilities": [
+        "This is a broad cross-team role with high visibility. You will collaborate closely with multiple teams across Microsoft to deliver key customer solutions and the technology to support them.",
+        "Lead design and implementation of the future architecture for highly scalable, durable, low latency identity management systems.",
+        "Build an effective and agile development organization using industry leading best practices.",
+        "Contribute to definition of requirements, KPIs, priorities and planning of engineering deliverables.",
+        "Drive changes across multiple teams in the Identity Organization."
+    ],
+    "minimum_requirements": [
+        "5+ years of design and services development experience",
+        "Experience with one or more general purpose programming languages including, but not limited to: Java, C/C++, C#, Python, JavaScript, and/or PowerShell",
+        "Experience with owning and/or driving large scale services, components or feature areas",
+        "Experience in Coding, Code Review and Technical communication documentation"
+    ],
+    "preferred_requirements": [
+        "BS in Computer Science or Engineering discipline OR 4 years of equivalent software engineering work experience",
+        "Experience optimizing automation, reliability and monitoring of LiveSite",
+        "Strong customer focus and data driven approach",
+        "End-to-end Delivery & Innovation",
+        "Agility in fast paced environment",
+        "Expertise in databases, distributed systems and/or big data technologies"
+    ],
+    "compensation": "",
+    "duration": ""
+}
