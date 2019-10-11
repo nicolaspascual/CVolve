@@ -18,9 +18,9 @@ from django.urls import path, include
 from cvolve.main import views
 
 urlpatterns = [
-    path('', views.ExampleView.as_view(), name='main'),
+    path('', views.MainView.as_view(), name='main'),
     path('admin/', admin.site.urls),
-    path('example/', views.ExampleView.as_view()),
+    path('example/', views.ExampleView.as_view(), name='example'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('signup/', views.RegisterView.as_view())
 ]
