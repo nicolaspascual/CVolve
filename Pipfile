@@ -12,6 +12,7 @@ ipdb = "*"
 django = "*"
 nltk = "*"
 gensim = "*"
+pyemd = "*"
 
 [requires]
 python_version = "3.6"
