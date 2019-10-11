@@ -6,13 +6,12 @@ verify_ssl = true
 [dev-packages]
 pylint = "*"
 autopep8 = "*"
+ipdb = "*"
 
 [packages]
 django = "*"
 nltk = "*"
 gensim = "*"
-django-material = "*"
-django-viewflow = "*"
 
 [requires]
 python_version = "3.6"
