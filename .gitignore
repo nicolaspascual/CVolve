@@ -3,5 +3,5 @@ db.sqlite3
 __pycache__/
 *.code-workspace
 .idea/
-/**/services/models/*
-!/**/services/models/.keep
+/**/services/pretrained_models/*
+!/**/services/pretrained_models/.keep
