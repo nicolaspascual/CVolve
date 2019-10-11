@@ -14,10 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from cvolve.main import views
 
 urlpatterns = [
+    path('', views.ExampleView.as_view(), name='main'),
     path('admin/', admin.site.urls),
-    path('example/', views.ExampleView.as_view())
+    path('example/', views.ExampleView.as_view()),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('signup/', views.RegisterView.as_view())
 ]
