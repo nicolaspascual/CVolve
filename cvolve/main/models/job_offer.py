@@ -31,3 +31,21 @@ class JobOffer(models.Model):
             self.title, self.description, self.responsibilities,
             self.minimum_requirements, self.preferred_requirements
         ])
+
+    def get_beauty_type(self):
+        if self.type == 'full':
+            return 'Full-Time'
+        elif self.type == 'part':
+            return 'Part-Time'
+        elif self.type == 'internship':
+            return 'Internship'
+        return self.type
+
+    def get_responsibilites(self):
+        return [a for a in self.responsibilities.split('\n') if a]
+
+    def get_minimum_requirements(self):
+        return [a for a in self.minimum_requirements.split('\n') if a]
+
+    def get_preferred_requirements(self):
+        return [a for a in self.preferred_requirements.strip().split('\n') if a]
