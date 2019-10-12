@@ -11,14 +11,14 @@ from cvolve.main.services import calculate_document_distance
 @receiver(post_save, sender=User, dispatch_uid='Update distance of user')
 def update_user_distance(sender, instance, **kwargs):
     for job_offer in JobOffer.objects.all():
-        JobOfferDistance(
+        JobOfferDistance.objects.update_or_create(
             user=instance,
             job_offer=job_offer,
             distance=calculate_document_distance(
                 instance.to_comparable_text(),
                 job_offer.to_comparable_text()
             )
-        ).save()
+        )
 
 
 @receiver(post_save, sender=UserEducation, dispatch_uid='Update distance of user education')
@@ -104,7 +104,7 @@ def update_job_offer_distance(sender, instance, **kwargs):
                     education.to_comparable_text()
                 )
             ).save()
-        
+
         for project in user.projects:
             JobOfferProjectsDistance(
                 projects=project,

@@ -2,6 +2,7 @@ from django.db import models
 from .user import User
 from .job_offer import JobOffer
 
+
 class JobOfferDistance(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -10,3 +11,4 @@ class JobOfferDistance(models.Model):
 
     class Meta:
         verbose_name_plural = 'JobOfferDistances'
+        unique_together = (('user', 'job_offer'),)

@@ -10,3 +10,4 @@ class JobOfferSkillDistance(models.Model):
 
     class Meta:
         verbose_name_plural = 'JobOfferSkillDistances'
+        unique_together = (('skill', 'job_offer'),)
