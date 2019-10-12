@@ -4,7 +4,7 @@ import pickle
 
 from pathlib import Path
 from os.path import join
-model_path = join(Path(__file__).parent, 'models/glove.6B.300d.pickle')
+model_path = join(Path(__file__).parent, 'pretrained_models/glove.6B.300d.pickle')
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
 
