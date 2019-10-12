@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User as DjangoUser
 from django.db import models
+from .job_offer import JobOffer
+
 
 class User(DjangoUser):
 
@@ -22,6 +24,17 @@ class User(DjangoUser):
     @property
     def education(self):
         return self.usereducation_set.all()
+
+    def get_offers_sorted_by_distance(self):
+        return JobOffer.objects.raw(
+            f"""
+            SELECT main_joboffer.*
+            FROM (main_user INNER JOIN main_jobofferdistance ON main_user.user_ptr_id = main_jobofferdistance.user_id)
+                INNER JOIN main_joboffer ON main_jobofferdistance.job_offer_id = main_joboffer.id
+            WHERE main_user.user_ptr_id={self.id}
+            ORDER BY main_jobofferdistance.distance
+            """
+        )
 
     def to_comparable_text(self):
         return ' '.join([
