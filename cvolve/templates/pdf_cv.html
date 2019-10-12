@@ -384,8 +384,8 @@ section:last-child {
         
         <div id="contactDetails" class="quickFade delayFour">
             <ul>
-                <li>e: <a href="mailto:{{user.mail}}" target="_blank">{{user.mail}}</a></li>
-                <li>m: {{user.phone}}</li>
+                <li>mail: <a href="mailto:{{user.mail}}" target="_blank">{{user.mail}}</a></li>
+                <li>phone: {{user.phone}}</li>
             </ul>
         </div>
         <div class="clear"></div>
@@ -414,7 +414,7 @@ section:last-child {
             <div class="sectionContent">
                 {% for experience in experiences %}
                     <article>
-                        <h2>{{experience.role}} ({{experience.company}}) {{experience.distance}}</h2>
+                        <h2>{{experience.role}} ({{experience.company}})</h2>
                         {% if experience.end_date %}
                             <p class="subDetails">{{experience.start_date}} - {{experience.start_date}}</p>
                         {% else %}
@@ -436,7 +436,7 @@ section:last-child {
             <div class="sectionContent">
                 <ul class="keySkills">
                     {% for skill in skills %}
-                        <li>{{skill.name}} {{skill.distance}}</li>
+                        <li>{{skill.name}}</li>
                     {% endfor %}
                 </ul>
             </div>
@@ -452,7 +452,7 @@ section:last-child {
             <div class="sectionContent">
                 {% for education in educations %}
                     <article>
-                        <h2>{{education.title}} ({{education.institution}}) {{education.distance}}</h2>
+                        <h2>{{education.title}} ({{education.institution}})</h2>
                         {% if experience.end_date %}
                             <p class="subDetails">{{education.start_date}} - {{education.start_date}}</p>
                         {% else %}
