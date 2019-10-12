@@ -25,3 +25,9 @@ class JobOffer(models.Model):
 
     class Meta:
         verbose_name_plural = 'JobOffers'
+
+    def to_comparable_text(self):
+        return ' '.join([
+            self.title, self.description, self.responsibilities,
+            self.minimum_requirements, self.preferred_requirements
+        ])

@@ -1,13 +1,46 @@
 {%extends "base.html"%}
 
+{% block div_style %}
+style="background-color:#113f67"
+{% endblock %}
+
 {% block content %}
-<form method="post">
-    {% csrf_token %}
 
-    <input id="id_username" type="text" name="username">
-    <input id="id_password" type="password" name="password">
-    <input id="id_repeat_password" type="password" name="repeat_password">
+<div class="row rounded register-container-cvolve" style="background-color:#003b69">
 
-    <button class="btn btn-primary" type="submit">Register</button>
-</form>
+    <div class="col-xs-12 col-sm-4 d-flex flex-column rounded-left justify-content-center align-items-center"  style="background-color: #226597;">
+        {% load static %}
+        <a class="p-2" href="{% url 'example' %}"><img src="{% static "/images/logo_hollow.png" %}" alt="CVolve Logo"></a>
+
+        <h1 class="p-2 text-over-bg" style="font-weight: bold;">Welcome to CVolve</h1>
+        <h5 class="p-2 text-over-bg">The NLP powered job seeker assistant</h5>
+    </div>
+    
+    <div class="col-xs-12 col-sm-8 d-flex rounded-right justify-content-center align-items-center" style="background-color: #5b92c8;">
+        <form class="col-xs-12 col-sm-7" method="post" style="width=100%">
+            {% csrf_token %}
+
+            <h1 class="text-over-bg" style="font-weight: bold; padding:5%; font-size: 50px;">Create Your Account</h1>
+
+            <hr/>
+
+            <div class="form-group">
+                <input id="id_username" type="text" name="username" class="form-control form-register rounded-form" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <input id="id_password" type="password" name="password" class="form-control form-register rounded-form" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+                <input id="id_repeat_password" type="password" name="repeat_password" class="form-control form-register rounded-form" placeholder="Password">
+            </div>
+        
+            <button class="btn btn-primary btn-cvolve" type="submit">Register</button>
+        </form>
+    </div>
+
+</div>
+
+
 {% endblock %}
