@@ -7,3 +7,4 @@ from .PdfView import PdfView
 from .TypeFormView import TypeFormView
 from .WebHookView import WebHookView
 from .OffersView import OffersView
+from .OfferDetailView import OfferDetailView

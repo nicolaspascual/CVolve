@@ -5,9 +5,13 @@ import pickle
 from pathlib import Path
 from os.path import join
 model_path = join(Path(__file__).parent, 'pretrained_models/glove.6B.300d.pickle')
-with open(model_path, 'rb') as f:
-    model = pickle.load(f)
+model = None
 
+def _init_model():
+    global model
+    if not model:
+        with open(model_path, 'rb') as f:
+            model = pickle.load(f)
 
 def calculate_document_distance(doc_1, doc_2):
     """
@@ -15,6 +19,7 @@ def calculate_document_distance(doc_1, doc_2):
         :param doc_1(str): Document 1
         :param doc_2(str): Document 2
     """
+    _init_model()
     doc_1 = clean_doc(doc_1)
     doc_2 = clean_doc(doc_2)
 

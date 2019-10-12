@@ -28,10 +28,11 @@ class User(DjangoUser):
     def education(self):
         return self.usereducation_set.all()
 
-    def get_offers_sorted_by_distance(self):
+    def get_offers_sorted_by_distance(self, return_distances=False):
+        distance_clause = ", main_jobofferdistance.distance" if return_distances else ''
         return JobOffer.objects.raw(
             f"""
-            SELECT main_joboffer.*
+            SELECT main_joboffer.* {distance_clause}
             FROM (main_user INNER JOIN main_jobofferdistance ON main_user.user_ptr_id = main_jobofferdistance.user_id)
                 INNER JOIN main_joboffer ON main_jobofferdistance.job_offer_id = main_joboffer.id
             WHERE main_user.user_ptr_id={self.id}

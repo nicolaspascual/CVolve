@@ -1,9 +1,9 @@
 from .job_offer import JobOffer
-from .user_education import UserEducation
-from .user_experience import UserExperience
-from .user_projects import UserProjects
+from .user_education import UserEducation, get_education_sorted_by_distance
+from .user_experience import UserExperience, get_experience_sorted_by_distance
+from .user_projects import UserProjects, get_projects_sorted_by_distance
 from .user import User
-from .user_skill import UserSkill
+from .user_skill import UserSkill, get_skills_sorted_by_distance
 from .job_offer_distance import JobOfferDistance
 from .job_offer_education_distance import JobOfferEducationDistance
 from .job_offer_experience_distance import JobOfferExperienceDistance

@@ -23,11 +23,13 @@ urlpatterns = [
     path('', views.MainView.as_view(), name='main'),
     path('admin/', admin.site.urls),
     path('example/', login_required(views.ExampleView.as_view()), name='example'),
-    path('offers/', login_required(views.OffersView.as_view()), name='offers'),
     path('accounts/login', views.LoginView.as_view(), name='login'),
     path('signup/', views.RegisterView.as_view(), name="signup"),
     path('to_pdf/', views.PdfView.as_view(), name='to_pdf'),
     path('typeform/', views.TypeFormView.as_view(), name='typeform'),
     path('typeform_hook/', views.WebHookView.as_view(), name='webhook'),
-    path('logout/', LogoutView.as_view(), name='logout')
+    path('logout/', LogoutView.as_view(), name='logout'),
+    path('offers/', login_required(views.OffersView.as_view()), name='offers'),
+    path(r'offers/<int:id>/',
+        login_required(views.OfferDetailView.as_view()), name='offer_details'),
 ]

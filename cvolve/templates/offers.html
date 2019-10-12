@@ -4,8 +4,10 @@
 
 <nav class="navbar navbar-expand-lg navbar-cvolve fixed-top">
   {% load static %}
-  <a class="navbar-brand" href="#"><img src="{% static "/images/logo_hollow_with_tagline_dark.png" %}" style="height:3em" alt="CVolve Logo"></a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#"><img src="{% static "/images/logo_hollow_with_tagline_dark.png" %}"
+      style="height:3em" alt="CVolve Logo"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
@@ -13,7 +15,8 @@
     <ul class="navbar-nav mr-auto">
     </ul>
     <div class="nav-item active">
-        <a href="{% url 'logout' %}" ><button class="btn btn-secondary" style="background-color:#226597"> Log Out </button></a>
+      <a href="{% url 'logout' %}"><button class="btn btn-secondary" style="background-color:#226597"> Log Out
+        </button></a>
     </div>
   </div>
 </nav>
@@ -27,16 +30,17 @@ style="background-color:#226597; height:inherit; min-height:100%"
 {% block content %}
 
 <div class="row col-xs-12 col-sm-10 d-flex flex-row justify-content-center">
-    {% for offer in offers %}
-    <div class="card card-offer">
-      <div class="card-body">
-        <h5 class="card-title font-weight-bold"> {{offer.title}} </h5>
-        <h6 class="card-subtitle font-weight-bold"> {{offer.company}} </h6>
-        <p class="card-text"> {{offer.city}} - {{offer.country}} </p>
-        <a href="#" class="btn btn-primary btn-cvolve-details">See details</a>
-      </div>
+  {% for offer in offers %}
+  <div class="card card-offer">
+    <div class="card-body">
+      <h5 class="card-title font-weight-bold"> {{offer.title}} </h5>
+      <h6 class="card-subtitle font-weight-bold"> {{offer.company}} </h6>
+      <p class="card-text"> {{offer.city}} - {{offer.country}} </p>
+      <a href="/offers/{{offer.id}}" class="btn btn-primary btn-cvolve-details">See details</a>
+      <p class="card-text"> {{offer.distance}}</p>
     </div>
-    {% endfor %}
+  </div>
+  {% endfor %}
 </div>
 
 

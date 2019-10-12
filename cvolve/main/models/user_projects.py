@@ -9,7 +9,21 @@ class UserProjects(models.Model):
     class Meta:
         verbose_name_plural = 'UserProjects'
 
+
     def to_comparable_text(self):
         return ' '.join([
             self.name, self.summary
         ])
+
+
+def get_projects_sorted_by_distance(user_id, offer_id):
+    return UserProjects.objects.raw(
+        f"""
+        SELECT main_userprojects.*
+        FROM ((main_user INNER JOIN main_userprojects ON main_user.user_ptr_id = main_userprojects.user_id)
+                INNER JOIN main_jobofferprojectsdistance on main_userprojects.id = main_jobofferprojectsdistance.projects_id)
+                INNER JOIN main_joboffer on main_joboffer.id = main_jobofferprojectsdistance.job_offer_id
+        WHERE main_user.user_ptr_id={user_id} and main_joboffer.id = {offer_id}
+        ORDER BY main_jobofferprojectsdistance.distance
+        """
+    )
