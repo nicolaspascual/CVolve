@@ -18,9 +18,6 @@ class WebHookView(View):
         jsondata = json.loads(request.body)
         data = jsondata['form_response']['answers']
 
-        with open('answers.json', 'w') as json_file:
-            json.dump(data, json_file)
-
         user_id = int(jsondata['form_response']['hidden']['id'])
         user = User.objects.get(user_ptr_id=user_id)
 
