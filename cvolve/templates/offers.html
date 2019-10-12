@@ -1,0 +1,19 @@
+{%extends "base.html"%}
+
+{% block div_style %}
+style="background-color:#113f67"
+{% endblock %}
+
+{% block content %}
+
+{% for offer in offers %}
+<ul>
+    <li> {{offer.title}} </li>
+    <li> {{offer.description}} </li>
+    <li> {{offer.company}} </li>
+    <li> {{offer.city}} </li>
+    <li> {{offer.country}} </li>
+</ul>
+{% endfor %}
+
+{% endblock %}

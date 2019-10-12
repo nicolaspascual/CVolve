@@ -6,6 +6,6 @@ class MainView(View):
     
     def get(self, request):
         if request.user.is_authenticated:
-            return redirect(reverse('example'))
+            return redirect(reverse('offers'))
         else:
             return redirect(reverse('login'))
