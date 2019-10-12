@@ -5,14 +5,14 @@
     "surnames": "Pascual Gonzalez",
     "mail": "nicolas@cvolve.com",
     "phone": "+34 676 68 31 90",
-    "summary": "Graduated in software engineering and currently studying a master's degree in artificial intelligence, what stands out most in my personality is the ability and predisposition to learning. I am passionate about discovering, innovating and mastering new technologies. For two years I have been working as a full-stack developer at Betterplace, a start-up that allows me to expand my knowledge as a developer as well as learn and improve with my colleagues. I combine work with personal projects that allow me to unleash my creativity and innovative spirit. Technically I would highlight my knowledge of python and javascript, my eagerness for standards and good practices as well as my deep interest in artificial intelligence.",
+    "summary": "Graduated in software engineering and currently studying a master's degree in artificial intelligence, what stands out most in my personality is the ability and predisposition to learning. I am passionate about discovering, innovating and mastering new technologies.",
     "experience": [
         {
             "role": "Full Stack Developer",
             "company": "Betterplace",
             "start_date": "01/01/2017",
             "end_date": "",
-            "summary": "Designed, documented and maintained dozens of features for a ruby on rails app with more than a 1000 users. Designed, implemented and integrated an artificial intelligent system able to calculate real estate prices. Using the scientific python stack and Ruby on Rails to develop an API. Designed and implemented a continuous integration system based on docker and GitLab CI. This system helped the company to improve code quality and reduced release times from minutes to seconds. Designed, implemented and integrated a machine learning system able to predict billing for a wide range of businesses based on geospatial data with the help of the scientific python stack. Migrated the whole infrastructure to Google Kubernetes Engine to reduce load times and increase reliability."
+            "summary": "Designed, documented and maintained dozens of features for a ruby on rails app with more than a 1000 users. Designed, implemented and integrated an artificial intelligent system able to calculate real estate prices. Using the scientific python stack and Ruby on Rails."
         },
         {
             "role": "Full Stack Developer",
