@@ -1,0 +1,83 @@
+{
+    "username": "nicolaspascual",
+    "password": "0123456789",
+    "name": "Nicolas",
+    "surnames": "Pascual Gonzalez",
+    "mail": "nicolas@cvolve.com",
+    "phone": "+34 676 68 31 90",
+    "summary": "Graduated in software engineering and currently studying a master's degree in artificial intelligence, what stands out most in my personality is the ability and predisposition to learning. I am passionate about discovering, innovating and mastering new technologies. For two years I have been working as a full-stack developer at Betterplace, a start-up that allows me to expand my knowledge as a developer as well as learn and improve with my colleagues. I combine work with personal projects that allow me to unleash my creativity and innovative spirit. Technically I would highlight my knowledge of python and javascript, my eagerness for standards and good practices as well as my deep interest in artificial intelligence.",
+    "experience": [
+        {
+            "role": "Full Stack Developer",
+            "company": "Betterplace",
+            "start_date": "01/01/2017",
+            "end_date": "",
+            "summary": "Designed, documented and maintained dozens of features for a ruby on rails app with more than a 1000 users. Designed, implemented and integrated an artificial intelligent system able to calculate real estate prices. Using the scientific python stack and Ruby on Rails to develop an API. Designed and implemented a continuous integration system based on docker and GitLab CI. This system helped the company to improve code quality and reduced release times from minutes to seconds. Designed, implemented and integrated a machine learning system able to predict billing for a wide range of businesses based on geospatial data with the help of the scientific python stack. Migrated the whole infrastructure to Google Kubernetes Engine to reduce load times and increase reliability."
+        },
+        {
+            "role": "Full Stack Developer",
+            "company": "Freelance",
+            "start_date": "01/05/2017",
+            "end_date": "01/09/2017",
+            "summary": "Developed and deployed a Django app to check stock values in real time for ziggtec."
+        },
+        {
+            "role": "Software Developer Intern",
+            "company": "Betterplace",
+            "start_date": "01/10/2015",
+            "end_date": "01/01/2017",
+            "summary": "Designed, implemented and maintained a data pipeline able to capture, clean and transform data from real estate portals. With the help of python, SQL (postgreSQL) and noSQL (mongoDB) the system is able to deal with millions of updates per day."
+        }
+    ],
+    "education": [
+        {
+            "title": "Master in Artificial Intelligence",
+            "institution": "UPC",
+            "start_date": "01/09/2018",
+            "end_date": "",
+            "summary": "Deep understanding of machine learning algorithms with the help of standard libraries such as the python scientific stack"
+        },
+        {
+            "title": "Bachelor in Software Engineer",
+            "institution": "Univeristy Of Oviedo",
+            "start_date": "01/09/2014",
+            "end_date": "01/06/2018",
+            "summary": "Deep understanding of machine learning algorithms with the help of standard libraries such as the python scientific stack"
+        }
+    ],
+    "skills": [
+        "python",
+        "javascript",
+        "ruby",
+        "postgresql",
+        "mongodb",
+        "sklearn",
+        "pandas",
+        "docker",
+        "bash",
+        "html",
+        "css"
+    ],
+    "languages": [
+        "english",
+        "spanish"
+    ],
+    "projects": [
+        {
+            "name": "VueJS single page application",
+            "summary": "Implemented a landing page for akademy.ai with Typescript and Vue"
+        },
+        {
+            "name": "Hacknights at UPC",
+            "summary": "Develop a Whatsapp Statistics Dashboard"
+        },
+        {
+            "name": "Google HashCode",
+            "summary": "Solved an optimization problem to group photos taking advantage of genetic algorithms"
+        },
+        {
+            "name": "Groceries Store price scrapper",
+            "summary": "Implemented a scrapper that collects data from grocerie stores in spain"
+        }
+    ]
+}
