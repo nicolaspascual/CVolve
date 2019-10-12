@@ -27,13 +27,26 @@ We consider that the step of creating and adapting a resume for each offer is th
 
 With all this information and regarding the offer requirements, we start generating a dynammic resume. The most important feature of this generation is that the system emphasizes on the information whose calculated distance is lower. The final layout of the CV shows several sections (contact information, education, work experience, ...) whose elements will be sorted according to their distance to the offer. In this way we increase the applicants probabilities of gaining the interest of the recruiters.
 
-Knowing that there is an empirical study behind the selection of the resume content, gives more confidence to the user. Moreover, the user is informed about the percentage of likelihood between each offer and its profile. Also, before generating the CV, the system shows them a preview so they can decide which template to use among several from the gallery.
+Knowing that there is an empirical study behind the selection of the resume content, gives more confidence to the user. Moreover, the user is informed about the percentage of likelihood between each offer and its profile. Also, before generating the CV, the system shows them a preview so they can decide which template to use among several from the gallery. In this way, the user knows the information he will be sending, and has the final decision whether to use our CV or another one done by him. Another good point is that, if the application wants to use a custom styling for the resume, he can still generate one from our templates and reuse the contents as they are the most accurate ones, but with his own style.
 
 ## Technologies
 
 ### NLP model
 
 GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space.
+
+### Server
+
+The whole project was developed using Django. Taking advantage of the *MTV* (Model, Template and View) pattern, a variation of *MVC*, we have designed all the views for the system but one (that is explained in the next section).
+
+### Database
+
+For the database we are using SQLite.
+
+### TypeForm
+
+For the task of gathering the information from the users, we have decided to use TypeForm. In that way, we externalize the creation of a large form with user-friendly design, and retrieving the data filled by the user is made easier using WebHooks. Once the user has submitted the form, the webhook sends the results to some Django endpoint, where the data is parsed and persisted into the corresponding database table.
+
 
 
 ## Temptative Extensions
@@ -44,4 +57,4 @@ GloVe is an unsupervised learning algorithm for obtaining vector representations
 - Scraper to gather job offers.
 - New templates for the resumes.
 - Sync with Linkedin.
-- Add more fields of user information.
+- Add more fields for user information.
