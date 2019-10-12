@@ -1,0 +1,29 @@
+.btn.btn-primary.btn-cvolve {
+    background-color: #226597;
+    border: none;
+    color: #f3f9fb;
+    text-align: center;
+    text-decoration: none;
+    margin: 7.5px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-width: 257.500px;
+    max-height: 38px;
+}
+
+.container-cvolve {
+    background-color: #f3f9fb;
+    height: 100%;
+}
+
+.href.href-cvolve {
+    color: #226597;
+}
+
+.form-control {
+    margin: 7.5px;
+    display: block;
+    max-width: 257.500px;
+    max-height: 38px;
+}

@@ -1,12 +1,25 @@
 {%extends "base.html"%}
 
 {% block content %}
+
 <form method="post">
+
+    {% load static %}
+    <img src="{% static "/images/logo_hollow.png" %}" alt="CVolve Logo">
+
     {% csrf_token %}
 
-    <input id="id_username" type="text" name="username">
-    <input id="id_password" type="password" name="password">
+    <div class="form-group">
+        <input id="id_username" type="text" name="username" class="form-control" placeholder="Username">
+        <input id="id_password" type="password" name="password" class="form-control" placeholder="Password">
+    </div>
 
-    <button class="btn btn-primary" type="submit">Login</button>
+    <div class="form-group">
+        <a href="{% url 'signup' %}" class="href href-cvolve">Not yet registered in CVolve? Sign Up 🚀</a>
+    </div>
+
+  
+    <button class="btn btn-primary btn-cvolve" type="submit">Sign In</button>
+    
 </form>
 {% endblock %}

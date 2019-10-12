@@ -3,17 +3,23 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         {% block base_header %}
         {% endblock %}
+
+        {% load static %}
+        <link rel="stylesheet" href="{% static "styles/style.css" %}" >
+
     </head>
     <body>
-        {% if errors %}
-            {% for error in errors %}
-                <div class="alert alert-danger" role="alert">
-                    {{ error }}
-                </div>
-            {% endfor %}
-        {% endif %}
+        <div class="d-flex justify-content-center align-items-center container-cvolve">
+            {% if errors %}
+                {% for error in errors %}
+                    <div class="alert alert-danger" role="alert">
+                        {{ error }}
+                    </div>
+                {% endfor %}
+            {% endif %}
 
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
+        </div>
     </body>
 </html>
