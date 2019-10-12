@@ -9,4 +9,4 @@ class JobOfferDistance(models.Model):
     distance = models.FloatField('Distance')
 
     class Meta:
-        verbose_name_plural = 'JobOfferDistance'
+        verbose_name_plural = 'JobOfferDistances'
