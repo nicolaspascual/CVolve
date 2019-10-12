@@ -23,6 +23,7 @@ urlpatterns = [
     path('', views.MainView.as_view(), name='main'),
     path('admin/', admin.site.urls),
     path('example/', login_required(views.ExampleView.as_view()), name='example'),
+
     path('accounts/login', views.LoginView.as_view(), name='login'),
     path('signup/', views.RegisterView.as_view(), name="signup"),
     path('to_pdf/', views.PdfView.as_view(), name='to_pdf'),
@@ -31,5 +32,8 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('offers/', login_required(views.OffersView.as_view()), name='offers'),
     path(r'offers/<int:id>/',
-        login_required(views.OfferDetailView.as_view()), name='offer_details'),
+         login_required(views.OfferDetailView.as_view()), name='offer_details'),
+
+    path('offers/<int:offer_id>/download_cv/',
+         login_required(views.CVDownloadView.as_view()), name='to_pdf'),
 ]

@@ -20,6 +20,10 @@
 .btn.btn-primary.btn-cvolve-details {
     background-color: #003b69;
     float: right;
+    font-weight: bold;
+    font-size: 125%;
+    padding-left: 7%;
+    padding-right: 7%;
 }
 
 .container-cvolve {
@@ -93,4 +97,24 @@
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.lbl-offer-detail {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.card-offer-detail {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    margin: 2.5%;
+}
+
+#error-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }

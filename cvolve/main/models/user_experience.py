@@ -20,14 +20,17 @@ class UserExperience(models.Model):
         ])
 
 
-def get_experience_sorted_by_distance(user_id, offer_id):
+def get_experience_sorted_by_distance(user_id, offer_id, limit=None, return_distances=False):
+    limit_clause = f'LIMIT {limit}' if limit else ''
+    distance_clause = ", main_jobofferexperiencedistance.distance" if return_distances else ''
     return UserExperience.objects.raw(
         f"""
-        SELECT main_userexperience.*
+        SELECT main_userexperience.* {distance_clause}
         FROM ((main_user INNER JOIN main_userexperience ON main_user.user_ptr_id = main_userexperience.user_id)
                 INNER JOIN main_jobofferexperiencedistance on main_userexperience.id = main_jobofferexperiencedistance.experience_id)
                 INNER JOIN main_joboffer on main_joboffer.id = main_jobofferexperiencedistance.job_offer_id
         WHERE main_user.user_ptr_id={user_id} and main_joboffer.id = {offer_id}
         ORDER BY main_jobofferexperiencedistance.distance
+        {limit_clause}
         """
     )
