@@ -10,8 +10,11 @@ class User(DjangoUser):
     mail = models.CharField('Mail', max_length=50)
     phone = models.CharField('Phone', max_length=50)
     summary = models.TextField('Summary')
-    skills = models.TextField('Skills')  # Separated by new lines
     languages = models.TextField('Languages')  # Separated by new lines
+
+    @property
+    def skills(self):
+        return self.skill_set.all()
 
     @property
     def experience(self):
@@ -38,7 +41,8 @@ class User(DjangoUser):
 
     def to_comparable_text(self):
         return ' '.join([
-            self.summary, self.skills, self.languages,
+            self.summary, self.languages,
+            ' '.join(exp.to_comparable_text() for exp in self.skills),
             ' '.join(exp.to_comparable_text() for exp in self.experience),
             ' '.join(proj.to_comparable_text() for proj in self.projects),
             ' '.join(ed.to_comparable_text() for ed in self.projects)
