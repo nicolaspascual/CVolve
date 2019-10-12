@@ -12,7 +12,7 @@
 
     </head>
     <body>
-        <div class="d-flex justify-content-center align-items-center container-cvolve">
+        <div class="d-flex justify-content-center align-items-center container-cvolve" {% block div_style %} style=" " {% endblock %}>
             {% if errors %}
                 {% for error in errors %}
                     <div class="alert alert-danger" role="alert">

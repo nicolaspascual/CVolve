@@ -1,37 +1,39 @@
 {%extends "base.html"%}
 
+{% block div_style %}
+style="background-color:#113f67"
+{% endblock %}
+
 {% block content %}
 
-<div class="row register-container-cvolve">
+<div class="row rounded register-container-cvolve" style="background-color:#003b69">
 
-    <div class="col-xs-10 col-sm-3 d-flex flex-column justify-content-center align-items-center" style="background-color: #226597; ">
+    <div class="col-xs-12 col-sm-4 d-flex flex-column rounded-left justify-content-center align-items-center"  style="background-color: #226597;">
         {% load static %}
-        <img class="p-2" src="{% static "/images/logo_hollow.png" %}" alt="CVolve Logo">
+        <a class="p-2" href="{% url 'example' %}"><img src="{% static "/images/logo_hollow.png" %}" alt="CVolve Logo"></a>
 
         <h1 class="p-2 text-over-bg" style="font-weight: bold;">Welcome to CVolve</h1>
-        <h4 class="p-2 text-over-bg">The NLP powered job seeker assistant</h4>
+        <h5 class="p-2 text-over-bg">The NLP powered job seeker assistant</h5>
     </div>
     
-    <div class="col-xs-10 col-sm-7 d-flex justify-content-center align-items-center" style="background-color: #87c0cd;">
-        <form method="post" style="width=100%">
+    <div class="col-xs-12 col-sm-8 d-flex rounded-right justify-content-center align-items-center" style="background-color: #5b92c8;">
+        <form class="col-xs-12 col-sm-7" method="post" style="width=100%">
             {% csrf_token %}
 
-            <h2>Create Account</h2>
+            <h1 class="text-over-bg" style="font-weight: bold; padding:5%; font-size: 50px;">Create Your Account</h1>
 
+            <hr/>
 
             <div class="form-group">
-                <label id="id_username_label" class="lbl-cvolve">Username</label>
-                <input id="id_username" type="text" name="username" class="form-control" placeholder="Username">
+                <input id="id_username" type="text" name="username" class="form-control form-register rounded-form" placeholder="Username">
             </div>
 
             <div class="form-group">
-                <label id="id_password_label" class="lbl-cvolve">Password</label>
-                <input id="id_password" type="password" name="password" class="form-control" placeholder="Password">
+                <input id="id_password" type="password" name="password" class="form-control form-register rounded-form" placeholder="Password">
             </div>
 
             <div class="form-group">
-                <label id="id_password_repeat_label" class="lbl-cvolve">Repeat your password</label>
-                <input id="id_repeat_password" type="password" name="repeat_password" class="form-control" placeholder="Password">
+                <input id="id_repeat_password" type="password" name="repeat_password" class="form-control form-register rounded-form" placeholder="Password">
             </div>
         
             <button class="btn btn-primary btn-cvolve" type="submit">Register</button>
