@@ -21,8 +21,7 @@ class WebHookView(View):
         with open('answers.json', 'w') as json_file:
             json.dump(data, json_file)
 
-        user_id = request.POST.get('id', '')
-        print(user_id)
+        user_id = int(jsondata['form_response']['hidden']['id'])
         user = User.objects.get(user_ptr_id=user_id)
 
         self.extract_user_data(data, user)
@@ -136,6 +135,6 @@ class WebHookView(View):
 
     def format_date(self, initial_date):
         data = initial_date.split('-')
-        return datetime.datetime(int(data[0]), int(data[1]), int(data[0]))
+        return datetime.datetime(int(data[0]), int(data[1]), int(data[2]))
 
 
