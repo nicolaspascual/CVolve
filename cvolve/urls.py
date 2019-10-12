@@ -25,5 +25,6 @@ urlpatterns = [
     path('example/', login_required(views.ExampleView.as_view()), name='example'),
     path('accounts/', include('django.contrib.auth.urls')),
     path('signup/', views.RegisterView.as_view(), name="signup"),
-    path('to_pdf/', views.PdfView.as_view(), name='to_pdf')
+    path('to_pdf/', views.PdfView.as_view(), name='to_pdf'),
+    path('typeform/', views.TypeFormView.as_view(), name='typeform')
 ]

@@ -1,0 +1,24 @@
+{%extends "base.html"%}
+
+{ % block base_header %}
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> <title>CVolution Form</title> <style type="text/css"> html{ margin: 0; height: 100%; overflow: hidden; } iframe{ position: absolute; left:0; right:0; bottom:0; top:0; border:0; } </style> 
+
+{ % endblock %}
+
+{% block content %}
+<div id="my-embedded-typeform" style="width: 100%;"></div>
+
+<script src="https://embed.typeform.com/embed.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", function() {
+      var el = document.getElementById("my-embedded-typeform");
+      
+      window.typeformEmbed.makeWidget(el, "https://admin.typeform.com/to/fgSZ4U", {
+        hideFooter: true,
+        hideHeaders: true,
+        opacity: 0
+      });
+    });
+  </script>
+{% endblock %}
