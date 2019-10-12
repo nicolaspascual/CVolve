@@ -3,6 +3,11 @@
     font-family: b612;
 }
 
+body {
+    height: calc(100% - 150px);
+    background-color: #226597;
+}
+
 .btn.btn-primary.btn-cvolve {
     background-color: #003b69;
     border: none;
@@ -104,7 +109,7 @@
     text-decoration: underline;
 }
 
-.card-offer-detail {
+.card-offer-detail, .card-cv-preview {
     padding-top: 1%;
     padding-bottom: 1%;
     padding-left: 2.5%;
@@ -119,4 +124,35 @@
     top: 0;
     left: 0;
     right: 0;
+}
+
+.scrollable-left-bar{
+    height: 100%;
+    overflow-y: auto;
+}
+
+.card-cv-preview .card  {
+    padding: 15px 10px;
+    margin: 20px 10px;
+}
+
+.card-cv-preview .scrollable-left-bar .card.selected {
+    box-shadow: #003b69;
+    border: 1px solid #003b69;
+}
+
+.card-cv-preview .scrollable-right-bar .card.selected {
+    box-shadow: #003b69;
+    border: 1px solid #003b69;
+}
+
+.card-cv-preview .scrollable-right-bar .card:hover {
+    box-shadow: #003b69;
+    border: 1px solid #003b69;
+    cursor: pointer;
+}
+
+
+.badge-primary {
+    background-color: #226597;
 }

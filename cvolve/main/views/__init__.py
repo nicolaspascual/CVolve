@@ -8,3 +8,4 @@ from .WebHookView import WebHookView
 from .CV_download_view import CVDownloadView
 from .OffersView import OffersView
 from .OfferDetailView import OfferDetailView
+from .CV_preview_view import CVPreviewView

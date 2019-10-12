@@ -1,0 +1,123 @@
+{%extends "base.html"%}
+
+{% block outer_body %}
+
+<nav class="navbar navbar-expand-lg navbar-cvolve">
+    {% load static %}
+    <a class="navbar-brand" href="/"><img src="{% static "/images/logo_hollow_with_tagline_dark.png" %}"
+            style="height:3em" alt="CVolve Logo"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <div class="nav-item active">
+            <a href="{% url 'logout' %}"><button class="btn btn-secondary" style="background-color:#226597"> Log Out
+                </button></a>
+        </div>
+    </div>
+</nav>
+
+{% endblock %}
+
+{% block div_style %}
+style="background-color:#226597; height:inherit; min-height:100%"
+{% endblock %}
+
+{% block content %}
+
+<div class="row col-xs-12 col-sm-10 d-flex flex-row justify-content-center" style="height: 100%;">
+
+    <div class="card card-cv-preview flex-row" style="height: 100%;">
+        <div class="col-8 scrollable-left-bar" style="height: 100%;">
+            <h3>Your Education</h3>
+            {% for education in educations %}
+                {% if forloop.counter0 < 2 %}
+                    <div class="card selected">
+                        <div class="ribbon-wrapper">
+                            <div class="ribbon primary-ribbon">Selected</div>
+                        </div>
+                        <h3 class="card-title">{{education.title}}</h5>
+                        <h5 class="card-subtitle">{{ education.institution }}</h4>
+                        <p class="card-text">{{ education.summary }}</p>
+                    </div>
+                    {% else %}
+                    <div class="card">
+                        <h3 class="card-title">{{education.title}}</h5>
+                        <h5 class="card-subtitle">{{ education.institution }}</h4>
+                        <p class="card-text">{{ education.summary }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <hr>
+            <h3>Your Experience</h3>
+            {% for experience in experiences %}
+                {% if forloop.counter0 < 2 %}
+                    <div class="card selected">
+                        <div class="ribbon-wrapper">
+                            <div class="ribbon primary-ribbon">Selected</div>
+                        </div>
+                        <h3 class="card-title">{{experience.role}}</h5>
+                        <h5 class="card-subtitle">{{ experience.company }}</h4>
+                        <p class="card-text">{{ experience.summary }}</p>
+                    </div>
+                {% else %}
+                    <div class="card">
+                        <h3 class="card-title">{{experience.role}}</h5>
+                        <h5 class="card-subtitle">{{ experience.company }}</h4>
+                        <p class="card-text">{{ experience.summary }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <hr>
+            <h3>Your Projects</h3>
+            {% for project in projects %}
+                {% if forloop.counter0 < 2 %}
+                    <div class="card selected">
+                        <div class="ribbon-wrapper">
+                            <div class="ribbon primary-ribbon">Selected</div>
+                        </div>
+                        <h3 class="card-title">{{project.name}}</h5>
+                        <p class="card-text">{{ project.summary }}</p>
+                    </div>
+                {% else %}
+                    <div class="card">
+                        <h3 class="card-title">{{project.name}}</h5>
+                        <p class="card-text">{{ project.summary }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <hr>
+            <h3>Your Skills</h3>
+            <div style="float: left; width: 10px; height: 1px;"></div>
+            {% for skill in skills %}
+                <span class="badge badge-primary badge-pill">{{ skill.name }}</span>
+            {% endfor %}
+        </div>
+        <div class="col-4 scrollable-right-bar">
+            <h3>Choose your template</h3>
+            <div class="card">
+                <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <img src="https://help.foxitsoftware.com/knowledge_base/kb_files/upload/image/20180731/1533021885870057.png" class="card-img" alt="...">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                        <h5 class="card-title">Template Name</h5>
+                        <p class="card-text">
+                                Template explanation
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+{% endblock %}
