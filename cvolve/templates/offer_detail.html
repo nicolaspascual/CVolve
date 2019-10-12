@@ -30,17 +30,48 @@ style="background-color:#226597; height:inherit; min-height:100%"
     
     <div class="card card-offer-detail">
       <div class="card-body">
-        <h5 class="card-title font-weight-bold"> {{offer.title}} ({{offer.type}}) </h5>
-        <h5 class="card-title font-weight-bold"> {{distance}} </h5>
-        <h6 class="card-subtitle font-weight-bold"> {{offer.company}} - {{ offer.department }}</h6>
+        <h2 class="card-title font-weight-bold"> {{offer.title}} ({{offer.get_beauty_type}}) </h2>
+        <h4 class="card-title font-weight-bold"> {{distance}} </h4>
+        <h4 class="card-subtitle font-weight-bold"> {{offer.company}} - {{ offer.department }}</h4>
+
+        <br>
+
         <p class="card-text"> {{offer.city}} - {{offer.state}} - {{offer.country}} </p>
         <p class="card-text"> {{offer.description}} </p>
-        <br><br>
-        <p class="card-text"> {{offer.responsibilities}} </p>
-        <br><br>
-        <p class="card-text"> {{offer.minimum_requirements}} </p>
-        <br><br>
-        <p class="card-text"> {{offer.preferred_requirements}} </p>
+        
+        <br>
+
+        <label class="lbl-offer-detail">Responsibilities</label>
+
+        <ul class="entry-content">
+          {% for response_item in offer.get_responsibilites %}
+            <li>{{response_item}}</li>
+          {% endfor %}
+        </ul>
+
+        <br>
+
+        <label class="lbl-offer-detail">Minimum Requirements</label>
+
+        <ul class="entry-content">
+          {% for min_requirements in offer.get_minimum_requirements %}
+            <li>{{min_requirements}}</li>
+          {% endfor %}
+        </ul>
+
+        {% if offer.get_preferred_requirements %}
+            <br>
+
+            <label class="lbl-offer-detail">Preferred Requirements</label>
+
+            <ul class="entry-content" name="preferred_requirements">
+              {% for pref_requirements in offer.get_preferred_requirements %}
+                <li>"{{pref_requirements}}"</li>
+              {% endfor %}
+            </ul>
+
+        {% endif %}
+        
         <a href="#" class="btn btn-primary btn-cvolve-details">Apply</a>
       </div>
     </div>
