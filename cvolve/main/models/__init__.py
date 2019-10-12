@@ -8,3 +8,4 @@ from .job_offer_distance import JobOfferDistance
 from .job_offer_education_distance import JobOfferEducationDistance
 from .job_offer_experience_distance import JobOfferExperienceDistance
 from .job_offer_skill_distance import JobOfferSkillDistance
+from .job_offer_projects_distance import JobOfferProjectsDistance

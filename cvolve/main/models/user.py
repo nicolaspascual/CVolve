@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User as DjangoUser
 from django.db import models
-from .job_offer import JobOffer
 
+from .job_offer import JobOffer
 
 class User(DjangoUser):
 
@@ -14,7 +14,7 @@ class User(DjangoUser):
 
     @property
     def skills(self):
-        return self.skill_set.all()
+        return self.userskill_set.all()
 
     @property
     def experience(self):
