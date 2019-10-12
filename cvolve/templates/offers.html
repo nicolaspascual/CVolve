@@ -39,7 +39,7 @@ style="background-color:#226597; height:inherit; min-height:100%"
         <h4 class="card-subtitle font-weight-bold"> {{first_offer.company}} </h4>
         <h5 class="card-text"> {{first_offer.city}} - {{first_offer.country}} </h5>
         <h2 class="card-text" style="position:absolute; bottom: 0.5rem; left: 1rem"> Match: {{ first_offer.distance|distance_to_percentage }}%</h2>
-        <a href="/offers/{{offer.id}}" class="btn btn-primary btn-cvolve-details" style="position:absolute; bottom: 1rem; right: 1rem">See details</a>
+        <a href="/offers/{{first_offer.id}}" class="btn btn-primary btn-cvolve-details" style="position:absolute; bottom: 1rem; right: 1rem">See details</a>
       </div>
     </div>  
   </div>
