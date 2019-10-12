@@ -8,3 +8,6 @@ class UserSkill(models.Model):
 
     class Meta:
         verbose_name_plural = 'UserSkills'
+
+    def to_comparable_text(self):
+        return self.name
