@@ -26,5 +26,6 @@ urlpatterns = [
     path('accounts/login', views.LoginView.as_view(), name='login'),
     path('signup/', views.RegisterView.as_view(), name="signup"),
     path('to_pdf/', views.PdfView.as_view(), name='to_pdf'),
-    path('typeform/', views.TypeFormView.as_view(), name='typeform')
+    path('typeform/', views.TypeFormView.as_view(), name='typeform'),
+    path('typeform_hook/', views.WebHookView.as_view(), name='webhook')
 ]

@@ -10,7 +10,6 @@ class UserEducation(models.Model):
     summary = models.TextField('Summary')
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
-
     class Meta:
         verbose_name_plural = 'UserEducations'
 
