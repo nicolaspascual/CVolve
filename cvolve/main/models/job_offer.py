@@ -5,14 +5,16 @@ class JobOffer(models.Model):
     title = models.CharField('Title', max_length=120)
     description = models.TextField('Description')
 
-    responsabilities = models.TextField('Responsabilities')
-    minimun_requirements = models.TextField('Minimun Requirements')
-    preferred_requirements = models.TextField('Preferred Requirements', blank=True)
+    responsibilities = models.TextField('Responsibilities')
+    minimum_requirements = models.TextField('Minimum Requirements')
+    preferred_requirements = models.TextField(
+        'Preferred Requirements', blank=True, null=True)
 
     type = models.CharField('Type', max_length=80)
-    compensation = models.FloatField('Compensation', blank=True)
-    duration = models.IntegerField('Duration', blank=True)
-    duration_unit = models.CharField('Duration Unit', max_length=20, blank=True)
+    compensation = models.FloatField('Compensation', blank=True, null=True)
+    duration = models.IntegerField('Duration', blank=True, null=True)
+    duration_unit = models.CharField(
+        'Duration Unit', max_length=20, blank=True, null=True)
 
     company = models.CharField('Company', max_length=120)
     department = models.CharField('Department', max_length=120)
