@@ -36,6 +36,6 @@ urlpatterns = [
     path('offers/<int:offer_id>/preview_cv/',
         login_required(views.CVPreviewView.as_view()), name='preview_cv'),
 
-    path('offers/<int:offer_id>/download_cv/',
+    path('offers/<int:offer_id>/download_cv/<slug:cv_color>',
          login_required(views.CVDownloadView.as_view()), name='download_cv'),
 ]
