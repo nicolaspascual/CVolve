@@ -13,12 +13,12 @@ from cvolve.main.models import (JobOffer, User, get_education_sorted_by_distance
 
 class CVDownloadView(View):
 
-    def get(self, request, offer_id, cv_color):
+    def get(self, request, offer_id, cv_color, template):
         user = User.objects.get(pk=request.user.id)
         offer = JobOffer.objects.get(pk=offer_id)
 
         response = HttpResponse(content_type='application/pdf')
-        html = render_to_string('pdf_cv.html', {
+        html = render_to_string(f'pdf_cv_{template}.html', {
             'user': user, 'offer': offer,
             'educations': get_education_sorted_by_distance(user.id, offer.id, 2, True),
             'experiences': get_experience_sorted_by_distance(user.id, offer.id, 2, True),
