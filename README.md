@@ -16,8 +16,32 @@ We are awared of all these disadvantage, that is why we have developed CVolve.
 
 ## Advantages
 
+We have focused on tackling the disadvantages shown in the previous section. The system indexes a huge set of job offers that then will be compared against the skills of the user, that will be retrieved by prompting a form to the user. Once we have the data from both sources (user data and offer details), we carry out some calculations using NLP algorithms so we can obtain the distance between the user knowledge with respect to the offer requirements. With this distance, we can determine which offers are more likely to fit the user expectations, and be able to sort all these offers and prompt to the user the ones that suit the best to him.
+
+We consider that the step of creating and adapting a resume for each offer is the most time consuming, so CVolve offers also a solution for that. The distance we calculate is not just the global one between the offer contents and the user experience. We also calculate a relative distance for the four main field groups provided by the user:
+
+1. Skills (programming languages, libraries, frameworks, ...).
+2. Education.
+3. Work experience.
+4. Personal Projects (hackathons, volunteering, event organization, ...).
+
+With all this information and regarding the offer requirements, we start generating a dynammic resume. The most important feature of this generation is that the system emphasizes on the information whose calculated distance is lower. The final layout of the CV shows several sections (contact information, education, work experience, ...) whose elements will be sorted according to their distance to the offer. In this way we increase the applicants probabilities of gaining the interest of the recruiters.
+
+Knowing that there is an empirical study behind the selection of the resume content, gives more confidence to the user. Moreover, the user is informed about the percentage of likelihood between each offer and its profile. Also, before generating the CV, the system shows them a preview so they can decide which template to use among several from the gallery.
 
 ## Technologies
 
+### NLP model
+
+GloVe is an unsupervised learning algorithm for obtaining vector representations for words. Training is performed on aggregated global word-word co-occurrence statistics from a corpus, and the resulting representations showcase interesting linear substructures of the word vector space.
+
 
 ## Temptative Extensions
+
+- New forms for different 
+- Cover letter generation based on the requirements of the offer.
+- Historical data of the resumes generated for the different offers, including application date and copy of the resume.
+- Scraper to gather job offers.
+- New templates for the resumes.
+- Sync with Linkedin.
+- Add more fields of user information.
