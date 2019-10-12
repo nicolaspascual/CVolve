@@ -6,14 +6,18 @@ style="background-color:#113f67"
 
 {% block content %}
 
-{% for offer in offers %}
-<ul>
-    <li> {{offer.title}} </li>
-    <li> {{offer.description}} </li>
-    <li> {{offer.company}} </li>
-    <li> {{offer.city}} </li>
-    <li> {{offer.country}} </li>
-</ul>
-{% endfor %}
+<div>
+    {% for offer in offers %}
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title"> {{offer.title}} </h5>
+        <h6 class="card-subtitle"> {{offer.company}} </h6>
+        <p class="card-text"> {{offer.city}} - {{offer.country}} </p>
+        <a href="#" class="btn btn-primary">See details</a>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+
 
 {% endblock %}
