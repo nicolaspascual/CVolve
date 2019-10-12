@@ -13,3 +13,8 @@ class UserExperience(models.Model):
 
     class Meta:
         verbose_name_plural = 'UserExperiences'
+
+    def to_comparable_text(self):
+        return ' '.join([
+            self.role, self.summary
+        ])

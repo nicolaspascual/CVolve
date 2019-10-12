@@ -9,3 +9,7 @@ class UserProjects(models.Model):
     class Meta:
         verbose_name_plural = 'UserProjects'
 
+    def to_comparable_text(self):
+        return ' '.join([
+            self.name, self.summary
+        ])
