@@ -17,14 +17,24 @@
         <div class="d-flex justify-content-center align-items-center container-cvolve" {% block div_style %} style=" " {% endblock %}>
             {% if errors %}
                 {% for error in errors %}
-                    <div class="alert alert-danger" role="alert">
+                <div id="error-top">
+                    <div class="alert alert-danger " role="alert">
                         {{ error }}
                     </div>
+                </div>
                 {% endfor %}
             {% endif %}
 
             {% block content %}
             {% endblock %}
         </div>
+        <script>
+            function timeout_close_alerts(){
+                window.setTimeout(function() {
+                    alert('lol');
+                    document.querySelector("#error-top > .alert").style.display = 'none';
+                }, 500);
+            }
+        </script>
     </body>
 </html>

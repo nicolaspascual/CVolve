@@ -111,3 +111,10 @@
     padding-right: 2.5%;
     margin: 2.5%;
 }
+
+#error-top{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
