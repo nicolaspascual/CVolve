@@ -26,9 +26,9 @@ style="background-color:#226597; height:inherit; min-height:100%"
 
 {% block content %}
 
-<div class="row col-xs-12 col-sm-10 d-flex flex-row justify-content-center">
+<div class="row col-xs-12 col-sm-10 d-flex flex-row justify-content-center" style="height: 100%;">
     
-    <div class="card card-offer-detail">
+    <div class="card card-offer-detail" style="height: 100%; overflow-y: auto;">
       <div class="card-body">
         <h2 class="card-title font-weight-bold"> {{offer.title}} ({{offer.get_beauty_type}}) </h2>
         <h4 class="card-title font-weight-bold"> {{distance}} </h4>
@@ -72,7 +72,7 @@ style="background-color:#226597; height:inherit; min-height:100%"
 
         {% endif %}
         
-        <a href="#" class="btn btn-primary btn-cvolve-details">Apply</a>
+        <a href="/offers/{{offer.id}}/preview_cv/" class="btn btn-primary btn-cvolve-details">Apply</a>
       </div>
     </div>
     
