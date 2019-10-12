@@ -1,23 +1,20 @@
 from django.views import View
-from django.shortcuts import render
-from io import BytesIO
-from django.http import HttpResponse
-from django.template.loader import get_template
 
-from xhtml2pdf import pisa
+from django.http import HttpResponse
+from django.template.loader import render_to_string
+from django.utils.text import slugify
+from django.contrib.auth.decorators import login_required
+
+from weasyprint import HTML
+from weasyprint.fonts import FontConfiguration
 
 
 class PdfView(View):
     
     def get(self, request):
-        # <view logic>
-        return self.render_to_pdf('pdf_cv.html')
+        response = HttpResponse(content_type='application/pdf')
+        html = render_to_string('pdf_cv.html', {})
 
-    def render_to_pdf(self, template_src, context_dict={}):
-        template = get_template(template_src)
-        html = template.render(context_dict)
-        result = BytesIO()
-        pdf = pisa.pisaDocument(BytesIO(html.encode('ISO-8859-1')), result)
-        if not pdf.err:
-            return HttpResponse(result.getvalue(), content_type='application/pdf')
-        return HttpResponse('There was an error on the PDF generation')
+        font_config = FontConfiguration()
+        HTML(string=html).write_pdf(response, font_config=font_config)
+        return response
