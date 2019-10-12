@@ -1,7 +1,7 @@
 from django.views import View
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import login
-from django.contrib.auth.models import User
+from cvolve.main.models.user import User
 from django.db.utils import IntegrityError
 
 
@@ -19,7 +19,7 @@ class RegisterView(View):
                 )
                 user.save()
                 login(request, user)
-                return redirect(reverse('main'))
+                return redirect(reverse('typeform'))
             except IntegrityError:
                 return render(request, 'register.html', {
                     'errors': ['The user does already exist or the username is invalid']
