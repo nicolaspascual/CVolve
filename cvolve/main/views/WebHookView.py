@@ -6,6 +6,9 @@ from django.views.decorators.csrf import csrf_exempt
 from cvolve.main.models.user_projects import UserProjects
 from cvolve.main.models.user_education import UserEducation
 from cvolve.main.models.user_experience import UserExperience
+from cvolve.main.models.user_skill import UserSkill
+from cvolve.main.models.user import User
+import datetime
 import json
 
 class WebHookView(View):
@@ -18,13 +21,17 @@ class WebHookView(View):
         with open('answers.json', 'w') as json_file:
             json.dump(data, json_file)
 
-        self.extract_user_data(data, request.user)
-        index = self.extract_user_experience(data, request.user, 5)
-        index = self.extract_user_education(data, request.user, index)
-        # index = self.extract_user_skills(data, request.user, index)
-        index = self.extract_user_projects(data, request.user, index + 1)
+        user_id = request.POST.get('id', '')
+        print(user_id)
+        user = User.objects.get(user_ptr_id=user_id)
 
-        return HttpResponse(jsondata)
+        self.extract_user_data(data, user)
+        index = self.extract_user_experience(data, user, 5)
+        index = self.extract_user_education(data, user, index)
+        index = self.extract_user_skills(data, user, index)
+        index = self.extract_user_projects(data, user, index)
+
+        return redirect(reverse('main'))
 
     def extract_user_data(self, data, user):
         info = {
@@ -34,23 +41,20 @@ class WebHookView(View):
             'phone': data[3]['phone_number'],
             'languages': data[4]['text']
         }
-        # for attr, val in info.items():
-        #     setattr(user, attr, val)
-        # user.save()
-        with open('user_data.json', 'w') as json_file:
-            json.dump(info, json_file)
+        for attr, val in info.items():
+            setattr(user, attr, val)
+        user.save()
 
     def extract_user_experience(self, data, user, index):
         results = []
-        print(data[index])
         index += 1
         if data[index - 1]['boolean']:
             for i in range(1,5):
                 info = {
                     'role': data[index]['text'],
                     'company': data[index + 1]['text'],
-                    'start_date': data[index + 2]['date'],
-                    'end_date': data[index + 3]['date'],
+                    'start_date': self.format_date(data[index + 2]['date']),
+                    'end_date': self.format_date(data[index + 3]['date']),
                     'summary': data[index + 4]['text'],
                     }
                 results.append(info)
@@ -62,10 +66,10 @@ class WebHookView(View):
                     break
                 else:
                     index += 1
-        with open('user_experience.json', 'w') as json_file:
-            # m = UserExperience(**element)
-            # m.save()
-            json.dump(results, json_file)
+        for element in results:
+            element['user'] = user
+            m = UserExperience(**element)
+            m.save()
         return index
 
     def extract_user_education(self, data, user, index):
@@ -76,8 +80,8 @@ class WebHookView(View):
                 info = {
                     'title': data[index]['text'],
                     'institution': data[index + 1]['text'],
-                    'start_date': data[index + 2]['date'],
-                    'end_date': data[index + 3]['date'],
+                    'start_date': self.format_date(data[index + 2]['date']),
+                    'end_date': self.format_date(data[index + 3]['date']),
                     'summary': data[index + 4]['text'],
                     }
                 results.append(info)
@@ -92,14 +96,17 @@ class WebHookView(View):
                     
         
         
-        # for element in results:
-        #     m = UserEducation(**element)
-        #     m.save()
-        with open('user_education.json', 'w') as json_file:
-            # m = UserExperience(**element)
-            # m.save()
-            json.dump(results, json_file)
+        for element in results:
+            element['user'] = user
+            m = UserEducation(**element)
+            m.save()
         return index
+
+    def extract_user_skills(self, data, user, index):
+        for skill in data[index]['text'].split(','):
+            m = UserSkill(name=skill.strip(), user=user)
+            m.save()
+        return (index + 1)
 
     def extract_user_projects(self, data, user, index):
         results = []
@@ -112,7 +119,7 @@ class WebHookView(View):
                     'summary': data[index + 1]['text'],
                     }
                 results.append(info)
-                index += 5
+                index += 2
                 if i == 4:
                     break
                 elif not data[index]['boolean']:
@@ -120,10 +127,15 @@ class WebHookView(View):
                     break
                 else:
                     index += 1
-        with open('user_projects.json', 'w') as json_file:
-            # m = UserExperience(**element)
-            # m.save()
-            json.dump(results, json_file)
+
+        for element in results:
+            element['user'] = user
+            m = UserProjects(**element)
+            m.save()
         return index
+
+    def format_date(self, initial_date):
+        data = initial_date.split('-')
+        return datetime.datetime(int(data[0]), int(data[1]), int(data[0]))
 
 
