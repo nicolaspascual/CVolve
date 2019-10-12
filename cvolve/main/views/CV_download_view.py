@@ -13,7 +13,7 @@ from cvolve.main.models import (JobOffer, User, get_education_sorted_by_distance
 
 class CVDownloadView(View):
 
-    def get(self, request, offer_id):
+    def get(self, request, offer_id, cv_color):
         user = User.objects.get(pk=request.user.id)
         offer = JobOffer.objects.get(pk=offer_id)
 
@@ -24,6 +24,7 @@ class CVDownloadView(View):
             'experiences': get_experience_sorted_by_distance(user.id, offer.id, 2, True),
             'projects': get_projects_sorted_by_distance(user.id, offer.id, 2, True),
             'skills': get_skills_sorted_by_distance(user.id, offer.id, return_distances=True),
+            'cv_color': cv_color
         })
 
         font_config = FontConfiguration()
