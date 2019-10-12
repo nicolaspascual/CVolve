@@ -67,7 +67,7 @@ def load_users_from_json(base_dir):
         with open(file_path, 'r') as f:
             user_json = json.load(f)
 
-            user = User(
+            user = User.objects.create_user(
                 username=user_json['username'],
                 password=user_json['password'],
                 name=user_json['name'],
