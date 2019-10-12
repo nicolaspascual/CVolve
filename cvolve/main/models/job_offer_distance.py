@@ -1,6 +1,9 @@
+from math import exp
+
 from django.db import models
-from .user import User
+
 from .job_offer import JobOffer
+from .user import User
 
 
 class JobOfferDistance(models.Model):

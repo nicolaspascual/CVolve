@@ -112,7 +112,9 @@
     margin: 2.5%;
 }
 
-#error-top{
+.card-match {}
+
+#error-top {
     position: fixed;
     top: 0;
     left: 0;
