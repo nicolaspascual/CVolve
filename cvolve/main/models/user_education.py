@@ -18,3 +18,16 @@ class UserEducation(models.Model):
         return ' '.join([
             self.title, self.summary
         ])
+
+
+def get_education_sorted_by_distance(user_id, offer_id):
+    return UserEducation.objects.raw(
+        f"""
+        SELECT main_usereducation.*
+        FROM ((main_user INNER JOIN main_usereducation ON main_user.user_ptr_id = main_usereducation.user_id)
+                INNER JOIN main_joboffereducationdistance on main_usereducation.id = main_joboffereducationdistance.education_id)
+                INNER JOIN main_joboffer on main_joboffer.id = main_joboffereducationdistance.job_offer_id
+        WHERE main_user.user_ptr_id={user_id} and main_joboffer.id = {offer_id}
+        ORDER BY main_joboffereducationdistance.distance
+        """
+    )
