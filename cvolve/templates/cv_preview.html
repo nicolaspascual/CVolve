@@ -1,4 +1,5 @@
 {%extends "base.html"%}
+{% load distance_to_percentage %}
 
 {% block outer_body %}
 
@@ -40,15 +41,15 @@ style="background-color:#226597; height:inherit; min-height:100%"
                 <div class="ribbon-wrapper">
                     <div class="ribbon primary-ribbon">Selected</div>
                 </div>
-                <h3 class="card-title">{{education.title}}</h5>
-                    <h5 class="card-subtitle">{{ education.institution }}</h4>
-                        <p class="card-text">{{ education.summary }}</p>
+                <h3 class="card-title">{{education.title}} <span style="font-size: 20px;">(Match: {{ education.distance|distance_to_percentage }}%)</span></h5>
+                <h5 class="card-subtitle">{{ education.institution }}</h4>
+                <p class="card-text">{{ education.summary }}</p>
             </div>
             {% else %}
             <div class="card">
-                <h3 class="card-title">{{education.title}}</h5>
-                    <h5 class="card-subtitle">{{ education.institution }}</h4>
-                        <p class="card-text">{{ education.summary }}</p>
+                <h3 class="card-title">{{education.title}} <span style="font-size: 20px;">(Match: {{ education.distance|distance_to_percentage }}%)</span></h5>
+                <h5 class="card-subtitle">{{ education.institution }}</h4>
+                <p class="card-text">{{ education.summary }}</p>
             </div>
             {% endif %}
             {% endfor %}
@@ -60,15 +61,15 @@ style="background-color:#226597; height:inherit; min-height:100%"
                 <div class="ribbon-wrapper">
                     <div class="ribbon primary-ribbon">Selected</div>
                 </div>
-                <h3 class="card-title">{{experience.role}}</h5>
-                    <h5 class="card-subtitle">{{ experience.company }}</h4>
-                        <p class="card-text">{{ experience.summary }}</p>
+                <h3 class="card-title">{{experience.role}} <span style="font-size: 20px;">(Match: {{ experience.distance|distance_to_percentage }}%)</span> </h5>
+                <h5 class="card-subtitle">{{ experience.company }}</h4>
+                <p class="card-text">{{ experience.summary }}</p>
             </div>
             {% else %}
             <div class="card">
-                <h3 class="card-title">{{experience.role}}</h5>
-                    <h5 class="card-subtitle">{{ experience.company }}</h4>
-                        <p class="card-text">{{ experience.summary }}</p>
+                <h3 class="card-title">{{experience.role}} <span style="font-size: 20px;">(Match: {{ experience.distance|distance_to_percentage }}%)</span></h5>
+                <h5 class="card-subtitle">{{ experience.company }}</h4>
+                <p class="card-text">{{ experience.summary }}</p>
             </div>
             {% endif %}
             {% endfor %}
@@ -80,13 +81,13 @@ style="background-color:#226597; height:inherit; min-height:100%"
                 <div class="ribbon-wrapper">
                     <div class="ribbon primary-ribbon">Selected</div>
                 </div>
-                <h3 class="card-title">{{project.name}}</h5>
-                    <p class="card-text">{{ project.summary }}</p>
+                <h3 class="card-title">{{project.name}} <span style="font-size: 20px;">(Match: {{ project.distance|distance_to_percentage }}%)</span></h5>
+                <p class="card-text">{{ project.summary }}</p>
             </div>
             {% else %}
             <div class="card">
-                <h3 class="card-title">{{project.name}}</h5>
-                    <p class="card-text">{{ project.summary }}</p>
+                <h3 class="card-title">{{project.name}} <span style="font-size: 20px;">(Match: {{ project.distance|distance_to_percentage }}%)</span> </h5>
+                <p class="card-text">{{ project.summary }}</p>
             </div>
             {% endif %}
             {% endfor %}
