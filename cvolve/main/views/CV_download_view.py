@@ -13,7 +13,7 @@ from cvolve.main.models import (JobOffer, User, get_education_sorted_by_distance
 
 class CVDownloadView(View):
 
-    def get(self, request, offer_id, cv_color):
+    def get(self, request, offer_id, cv_color, template):
         user = User.objects.get(pk=request.user.id)
         offer = JobOffer.objects.get(pk=offer_id)
 
