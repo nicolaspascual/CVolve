@@ -35,85 +35,155 @@ style="background-color:#226597; height:inherit; min-height:100%"
         <div class="col-8 scrollable-left-bar" style="height: 100%;">
             <h3>Your Education</h3>
             {% for education in educations %}
-                {% if forloop.counter0 < 2 %}
-                    <div class="card selected">
-                        <div class="ribbon-wrapper">
-                            <div class="ribbon primary-ribbon">Selected</div>
-                        </div>
-                        <h3 class="card-title">{{education.title}}</h5>
-                        <h5 class="card-subtitle">{{ education.institution }}</h4>
+            {% if forloop.counter0 < 2 %}
+            <div class="card selected">
+                <div class="ribbon-wrapper">
+                    <div class="ribbon primary-ribbon">Selected</div>
+                </div>
+                <h3 class="card-title">{{education.title}}</h5>
+                    <h5 class="card-subtitle">{{ education.institution }}</h4>
                         <p class="card-text">{{ education.summary }}</p>
-                    </div>
-                    {% else %}
-                    <div class="card">
-                        <h3 class="card-title">{{education.title}}</h5>
-                        <h5 class="card-subtitle">{{ education.institution }}</h4>
+            </div>
+            {% else %}
+            <div class="card">
+                <h3 class="card-title">{{education.title}}</h5>
+                    <h5 class="card-subtitle">{{ education.institution }}</h4>
                         <p class="card-text">{{ education.summary }}</p>
-                    </div>
-                {% endif %}
+            </div>
+            {% endif %}
             {% endfor %}
             <hr>
             <h3>Your Experience</h3>
             {% for experience in experiences %}
-                {% if forloop.counter0 < 2 %}
-                    <div class="card selected">
-                        <div class="ribbon-wrapper">
-                            <div class="ribbon primary-ribbon">Selected</div>
-                        </div>
-                        <h3 class="card-title">{{experience.role}}</h5>
-                        <h5 class="card-subtitle">{{ experience.company }}</h4>
+            {% if forloop.counter0 < 2 %}
+            <div class="card selected">
+                <div class="ribbon-wrapper">
+                    <div class="ribbon primary-ribbon">Selected</div>
+                </div>
+                <h3 class="card-title">{{experience.role}}</h5>
+                    <h5 class="card-subtitle">{{ experience.company }}</h4>
                         <p class="card-text">{{ experience.summary }}</p>
-                    </div>
-                {% else %}
-                    <div class="card">
-                        <h3 class="card-title">{{experience.role}}</h5>
-                        <h5 class="card-subtitle">{{ experience.company }}</h4>
+            </div>
+            {% else %}
+            <div class="card">
+                <h3 class="card-title">{{experience.role}}</h5>
+                    <h5 class="card-subtitle">{{ experience.company }}</h4>
                         <p class="card-text">{{ experience.summary }}</p>
-                    </div>
-                {% endif %}
+            </div>
+            {% endif %}
             {% endfor %}
             <hr>
             <h3>Your Projects</h3>
             {% for project in projects %}
-                {% if forloop.counter0 < 2 %}
-                    <div class="card selected">
-                        <div class="ribbon-wrapper">
-                            <div class="ribbon primary-ribbon">Selected</div>
-                        </div>
-                        <h3 class="card-title">{{project.name}}</h5>
-                        <p class="card-text">{{ project.summary }}</p>
-                    </div>
-                {% else %}
-                    <div class="card">
-                        <h3 class="card-title">{{project.name}}</h5>
-                        <p class="card-text">{{ project.summary }}</p>
-                    </div>
-                {% endif %}
+            {% if forloop.counter0 < 2 %}
+            <div class="card selected">
+                <div class="ribbon-wrapper">
+                    <div class="ribbon primary-ribbon">Selected</div>
+                </div>
+                <h3 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{ project.summary }}</p>
+            </div>
+            {% else %}
+            <div class="card">
+                <h3 class="card-title">{{project.name}}</h5>
+                    <p class="card-text">{{ project.summary }}</p>
+            </div>
+            {% endif %}
             {% endfor %}
             <hr>
             <h3>Your Skills</h3>
             <div style="float: left; width: 10px; height: 1px;"></div>
             {% for skill in skills %}
-                <span class="badge badge-primary badge-pill">{{ skill.name }}</span>
+            <span class="badge badge-primary badge-pill">{{ skill.name }}</span>
             {% endfor %}
         </div>
-        <div class="col-4 scrollable-right-bar">
-            <h3>Choose your template</h3>
-            <div class="card">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="https://help.foxitsoftware.com/knowledge_base/kb_files/upload/image/20180731/1533021885870057.png" class="card-img" alt="...">
+        <script>
+            function reset_cards_templates(link) {
+                document.getElementById('button-download-pdf').disabled = false;
+                document.getElementById('button-download-pdf').href = link;
+                Array.from(document.getElementsByClassName('template-card'))
+                    .forEach(e => e.classList.remove('selected'));
+            }
+        </script>
+        <div class="col-4 scrollable-right-bar justify-content-center" style="display: relative;">
+            <div style="height: calc(100% - 50px); overflow-y: auto;">
+                <h3>Choose your template</h3>
+                <div class="card template-card"
+                    onclick="reset_cards_templates('student_blue'); this.classList.add('selected');">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="https://help.foxitsoftware.com/knowledge_base/kb_files/upload/image/20180731/1533021885870057.png"
+                                class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Student Blue</h5>
+                                <p class="card-text">
+                                    Template explanation
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                        <h5 class="card-title">Template Name</h5>
-                        <p class="card-text">
-                                Template explanation
-                        </p>
+                </div>
+
+                <div class="card template-card"
+                    onclick="reset_cards_templates('student_green'); this.classList.add('selected');">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="https://help.foxitsoftware.com/knowledge_base/kb_files/upload/image/20180731/1533021885870057.png"
+                                class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Student Green</h5>
+                                <p class="card-text">
+                                    Template explanation
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card template-card"
+                    onclick="reset_cards_templates('coorporate_blue'); this.classList.add('selected');">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="https://help.foxitsoftware.com/knowledge_base/kb_files/upload/image/20180731/1533021885870057.png"
+                                class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Corporate Blue</h5>
+                                <p class="card-text">
+                                    Template explanation
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card template-card"
+                    onclick="reset_cards_templates('corporate_green'); this.classList.add('selected');">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="https://help.foxitsoftware.com/knowledge_base/kb_files/upload/image/20180731/1533021885870057.png"
+                                class="card-img" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">Corporate Green</h5>
+                                <p class="card-text">
+                                    Template explanation
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <a class="btn btn-primary btn-cvolve-details col-xs-11 col-sm-11" style="position: absolute; bottom: 0;"
+                id="button-download-pdf" disabled="true">
+                Create CV
+            </a>
         </div>
     </div>
 
