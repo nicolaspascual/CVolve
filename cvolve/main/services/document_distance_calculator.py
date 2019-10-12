@@ -23,7 +23,7 @@ def calculate_document_distance(doc_1, doc_2):
 
 def clean_doc(doc: str):
     return [
-        word.lower()
+        word.lower().strip()
         for word in doc.split()
         if word not in stopwords.words('english')
     ]
