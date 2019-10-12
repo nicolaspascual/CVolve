@@ -1,3 +1,8 @@
+* {
+    font-size: 100%;
+    font-family: b612;
+}
+
 .btn.btn-primary.btn-cvolve {
     background-color: #226597;
     border: none;
@@ -21,9 +26,22 @@
     color: #226597;
 }
 
+.register-container-cvolve {
+    max-width: 80%;
+    width: 80%;
+    max-height: 80%;
+    height: 80%;
+    background-color: #f3f9fb;
+}
+
 .form-control {
     margin: 7.5px;
     display: block;
     max-width: 257.500px;
     max-height: 38px;
+}
+
+.text-over-bg {
+    color: #f3f9fb;
+    text-align: center;
 }

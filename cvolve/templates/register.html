@@ -1,13 +1,44 @@
 {%extends "base.html"%}
 
 {% block content %}
-<form method="post">
-    {% csrf_token %}
 
-    <input id="id_username" type="text" name="username">
-    <input id="id_password" type="password" name="password">
-    <input id="id_repeat_password" type="password" name="repeat_password">
+<div class="row register-container-cvolve">
 
-    <button class="btn btn-primary" type="submit">Register</button>
-</form>
+    <div class="col-xs-10 col-sm-3 d-flex flex-column justify-content-center align-items-center" style="background-color: #226597; ">
+        {% load static %}
+        <img class="p-2" src="{% static "/images/logo_hollow.png" %}" alt="CVolve Logo">
+
+        <h1 class="p-2 text-over-bg" style="font-weight: bold;">Welcome to CVolve</h1>
+        <h4 class="p-2 text-over-bg">The NLP powered job seeker assistant</h4>
+    </div>
+    
+    <div class="col-xs-10 col-sm-7 d-flex justify-content-center align-items-center" style="background-color: #87c0cd;">
+        <form method="post" style="width=100%">
+            {% csrf_token %}
+
+            <h2>Create Account</h2>
+
+
+            <div class="form-group">
+                <label id="id_username_label" class="lbl-cvolve">Username</label>
+                <input id="id_username" type="text" name="username" class="form-control" placeholder="Username">
+            </div>
+
+            <div class="form-group">
+                <label id="id_password_label" class="lbl-cvolve">Password</label>
+                <input id="id_password" type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+                <label id="id_password_repeat_label" class="lbl-cvolve">Repeat your password</label>
+                <input id="id_repeat_password" type="password" name="repeat_password" class="form-control" placeholder="Password">
+            </div>
+        
+            <button class="btn btn-primary btn-cvolve" type="submit">Register</button>
+        </form>
+    </div>
+
+</div>
+
+
 {% endblock %}
