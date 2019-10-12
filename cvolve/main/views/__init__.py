@@ -6,3 +6,4 @@ from .RegisterView import RegisterView
 from .PdfView import PdfView
 from .TypeFormView import TypeFormView
 from .WebHookView import WebHookView
+from .OffersView import OffersView

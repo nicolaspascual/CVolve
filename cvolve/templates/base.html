@@ -12,6 +12,8 @@
 
     </head>
     <body>
+        {% block outer_body %}
+        {% endblock %}
         <div class="d-flex justify-content-center align-items-center container-cvolve" {% block div_style %} style=" " {% endblock %}>
             {% if errors %}
                 {% for error in errors %}

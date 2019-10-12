@@ -13,19 +13,21 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
-from django.urls import path
 from cvolve.main import views
+from django.contrib import admin
 from django.contrib.auth.decorators import login_required
-
+from django.urls import path, include
+from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
     path('', views.MainView.as_view(), name='main'),
     path('admin/', admin.site.urls),
     path('example/', login_required(views.ExampleView.as_view()), name='example'),
+    path('offers/', login_required(views.OffersView.as_view()), name='offers'),
     path('accounts/login', views.LoginView.as_view(), name='login'),
     path('signup/', views.RegisterView.as_view(), name="signup"),
     path('to_pdf/', views.PdfView.as_view(), name='to_pdf'),
     path('typeform/', views.TypeFormView.as_view(), name='typeform'),
-    path('typeform_hook/', views.WebHookView.as_view(), name='webhook')
+    path('typeform_hook/', views.WebHookView.as_view(), name='webhook'),
+    path('logout/', LogoutView.as_view(), name='logout')
 ]

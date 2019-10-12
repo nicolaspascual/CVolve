@@ -3,4 +3,9 @@ from .user_education import UserEducation
 from .user_experience import UserExperience
 from .user_projects import UserProjects
 from .user import User
-from.job_offer_distance import JobOfferDistance
+from .user_skill import UserSkill
+from .job_offer_distance import JobOfferDistance
+from .job_offer_education_distance import JobOfferEducationDistance
+from .job_offer_experience_distance import JobOfferExperienceDistance
+from .job_offer_skill_distance import JobOfferSkillDistance
+from .job_offer_projects_distance import JobOfferProjectsDistance
