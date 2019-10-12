@@ -5,3 +5,4 @@ from .LoginView import LoginView
 from .RegisterView import RegisterView
 from .PdfView import PdfView
 from .OffersView import OffersView
+from .OfferDetailView import OfferDetailView
