@@ -1,0 +1,51 @@
+{
+    "username": "pepe",
+    "password": "perez",
+    "name": "Pepe",
+    "surnames": "Perez",
+    "mail": "pepe@cvolve.com",
+    "phone": "+34 666 66 66 66",
+    "summary": "Final year Bachelor Tech student at LNMIIT. Inquisitive, hard-working and consistent. Looking for internship opportunities at Microsoft where I can apply my skills and contribute to real-world projects.",
+    "experience": [{
+            "role": "Research teaching assistant",
+            "company": "LNMIIT",
+            "start_date": "01/07/2018",
+            "end_date": "01/12/2018",
+            "summary": "Explaining theory behind different experiments to Undergraduate students and guiding them in lab practicals."
+        }
+    ],
+    "education": [{
+        "title": "Bachelor of Technology, Computer Science and Engineering",
+        "institution": "LNM Institute of Information Technology",
+        "start_date": "01/09/2018",
+        "end_date": "",
+        "summary": "Computer science and egineering applied general studies specialized in compilers and real time systems using C++ and Java."
+    }],
+    "skills": [
+        "c++",
+        "c",
+        "python",
+        "postgresql",
+        "mysql",
+        "java",
+        "matlab",
+        "javascript",
+        "flask",
+        "css",
+        "html",
+        "data structures"
+    ],
+    "languages": [
+        "english",
+        "indian"
+    ],
+    "projects": [{
+            "name": "Next Season Scrapper",
+            "summary": "A python based web application which crawls imdb.com and collects information aboutthe upcoming episode for a given TV-Series and emailing this information to the pro-vided email id. Using technologies such as BeautifulSoup, MySQL and Python"
+        },
+        {
+            "name": "Learning management app",
+            "summary": "I was responsible for designing database related to faculty and writing Java code whichintegrates faculty features like Course creation, Posts, Assignment to the mainapplication using Java, Swing and MongoDB."
+        }
+    ]
+}
