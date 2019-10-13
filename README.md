@@ -51,10 +51,10 @@ For the task of gathering the information from the users, we have decided to use
 
 ## Temptative Extensions
 
-- New forms for different 
+- New forms for different job types.
 - Cover letter generation based on the requirements of the offer.
 - Historical data of the resumes generated for the different offers, including application date and copy of the resume.
 - Scraper to gather job offers.
 - New templates for the resumes.
-- Sync with Linkedin.
+- Linkedin/Github integration.
 - Add more fields for user information.
